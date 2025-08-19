@@ -66,7 +66,7 @@ go-to: cabinet if spd_in_government; menu if not spd_in_government
 
 President: [+ president +]
 
-Chancellor: [+ chancellor +] ([+ chancellor_party +])
+Prime Minister: [+ chancellor +] ([+ chancellor_party +])
 
 Reichstag composition:
 
@@ -112,7 +112,7 @@ Justice: [+ justice_minister_party +]
 
 Foreign: [+ foreign_minister_party +]
 
-Reichswehr: [+ reichswehr_minister_party +]
+Defence: [+ reichswehr_minister_party +]
 
 Agriculture: [+ agriculture_minister_party +]
 
