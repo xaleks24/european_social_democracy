@@ -18,7 +18,7 @@ Q.unemployed = 8.6;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['snd', 'lep', 'z', 're', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['snd', 'lep', 'z', 're', 'dvp', 'fed', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -27,7 +27,7 @@ Q.workers_lep = 20;
 Q.workers_z = 5;
 Q.workers_re = 0;
 Q.workers_dvp = 0;
-Q.workers_dnvp = 5;
+Q.workers_fed = 5;
 Q.workers_nsdap = 0;
 Q.workers_other = 10;
 
@@ -36,7 +36,7 @@ Q.old_middle_lep = 0;
 Q.old_middle_z = 5;
 Q.old_middle_re= 10;
 Q.old_middle_dvp = 25;
-Q.old_middle_dnvp = 25;
+Q.old_middle_fed = 25;
 Q.old_middle_nsdap = 10;
 Q.old_middle_other = 10;
 
@@ -45,7 +45,7 @@ Q.new_middle_lep = 0;
 Q.new_middle_z = 10;
 Q.new_middle_re= 25;
 Q.new_middle_dvp = 25;
-Q.new_middle_dnvp = 10;
+Q.new_middle_fed = 10;
 Q.new_middle_nsdap = 5;
 Q.new_middle_other = 15;
 
@@ -54,7 +54,7 @@ Q.rural_lep = 0;
 Q.rural_z = 5;
 Q.rural_re= 5;
 Q.rural_dvp = 15;
-Q.rural_dnvp = 45;
+Q.rural_fed = 45;
 Q.rural_nsdap = 5;
 Q.rural_other = 10;
 
@@ -63,7 +63,7 @@ Q.unemployed_lep = 55;
 Q.unemployed_z = 1;
 Q.unemployed_re = 0;
 Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
+Q.unemployed_fed = 5;
 Q.unemployed_nsdap = 15;
 Q.unemployed_other = 9;
 
@@ -72,7 +72,7 @@ Q.catholics_lep = 5;
 Q.catholics_z = 50;
 Q.catholics_re = 0;
 Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
+Q.catholics_fed = 5;
 Q.catholics_nsdap = 0;
 Q.catholics_other = 10;
 !}
@@ -91,7 +91,7 @@ Q.unemployed = 20;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['snd', 'lep', 'z', 're', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['snd', 'lep', 'z', 're', 'dvp', 'fed', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -100,7 +100,7 @@ Q.workers_lep = 20;
 Q.workers_z = 5;
 Q.workers_re = 0;
 Q.workers_dvp = 0;
-Q.workers_dnvp = 0;
+Q.workers_fed = 0;
 Q.workers_nsdap = 10;
 Q.workers_other = 15;
 
@@ -109,7 +109,7 @@ Q.old_middle_lep = 0;
 Q.old_middle_z = 5;
 Q.old_middle_re= 5;
 Q.old_middle_dvp = 10;
-Q.old_middle_dnvp = 20;
+Q.old_middle_fed = 20;
 Q.old_middle_nsdap = 30;
 Q.old_middle_other = 15;
 
@@ -118,7 +118,7 @@ Q.new_middle_lep = 0;
 Q.new_middle_z = 5;
 Q.new_middle_re = 10;
 Q.new_middle_dvp = 20;
-Q.new_middle_dnvp = 10;
+Q.new_middle_fed = 10;
 Q.new_middle_nsdap = 25;
 Q.new_middle_other = 15;
 
@@ -127,7 +127,7 @@ Q.rural_lep = 0;
 Q.rural_z = 5;
 Q.rural_re= 5;
 Q.rural_dvp = 10;
-Q.rural_dnvp = 20;
+Q.rural_fed = 20;
 Q.rural_nsdap = 25;
 Q.rural_other = 15;
 
@@ -136,7 +136,7 @@ Q.unemployed_lep = 50;
 Q.unemployed_z = 0;
 Q.unemployed_re = 0;
 Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 5;
+Q.unemployed_fed = 5;
 Q.unemployed_nsdap = 25;
 Q.unemployed_other = 5;
 
@@ -145,7 +145,7 @@ Q.catholics_lep = 5;
 Q.catholics_z = 50;
 Q.catholics_re = 0;
 Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
+Q.catholics_fed = 5;
 Q.catholics_nsdap = 10;
 Q.catholics_other = 5;
 
@@ -154,7 +154,7 @@ Q.lep_r = 10;
 Q.z_r = 15;
 Q.re_r = 10;
 Q.dvp_r = 10;
-Q.dnvp_r = 14;
+Q.fed_r = 14;
 Q.nsdap_r = 10;
 Q.other_r = 5;
 !}
@@ -173,7 +173,7 @@ Q.unemployed = 33;
 Q.catholics = 30;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['snd', 'lep', 'z', 're', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['snd', 'lep', 'z', 're', 'dvp', 'fed', 'nsdap', 'other'];
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
@@ -182,7 +182,7 @@ Q.workers_lep = 20;
 Q.workers_z = 5;
 Q.workers_re = 0;
 Q.workers_dvp = 0;
-Q.workers_dnvp = 0;
+Q.workers_fed = 0;
 Q.workers_nsdap = 15;
 Q.workers_other = 5;
 
@@ -191,7 +191,7 @@ Q.old_middle_lep = 0;
 Q.old_middle_z = 5;
 Q.old_middle_re = 4;
 Q.old_middle_dvp = 4;
-Q.old_middle_dnvp = 15;
+Q.old_middle_fed = 15;
 Q.old_middle_nsdap = 70;
 Q.old_middle_other = 5;
 
@@ -200,7 +200,7 @@ Q.new_middle_lep = 0;
 Q.new_middle_z = 5;
 Q.new_middle_re = 10;
 Q.new_middle_dvp = 10;
-Q.new_middle_dnvp = 10;
+Q.new_middle_fed = 10;
 Q.new_middle_nsdap = 60;
 Q.new_middle_other = 5;
 
@@ -209,7 +209,7 @@ Q.rural_lep = 0;
 Q.rural_z = 5;
 Q.rural_re = 0;
 Q.rural_dvp = 5;
-Q.rural_dnvp = 15;
+Q.rural_fed = 15;
 Q.rural_nsdap = 65;
 Q.rural_other = 5;
 
@@ -218,7 +218,7 @@ Q.unemployed_lep = 40;
 Q.unemployed_z = 0;
 Q.unemployed_re = 0;
 Q.unemployed_dvp = 0;
-Q.unemployed_dnvp = 0;
+Q.unemployed_fed = 0;
 Q.unemployed_nsdap = 50;
 Q.unemployed_other = 5;
 
@@ -227,7 +227,7 @@ Q.catholics_lep = 5;
 Q.catholics_z = 60;
 Q.catholics_re = 0;
 Q.catholics_dvp = 5;
-Q.catholics_dnvp = 5;
+Q.catholics_fed = 5;
 Q.catholics_nsdap = 10;
 Q.catholics_other = 5;
 
@@ -236,7 +236,7 @@ Q.lep_r = 10;
 Q.z_r = 15;
 Q.re_r = 10;
 Q.dvp_r = 10;
-Q.dnvp_r = 14;
+Q.fed_r = 14;
 Q.nsdap_r = 10;
 Q.other_r = 5;
 !}
@@ -251,7 +251,7 @@ Q.z_r = Q.z_votes;
 Q.lep_r = Q.lep_votes;
 Q.re_r = Q.re_votes;
 Q.dvp_r = Q.dvp_votes;
-Q.dnvp_r = Q.dnvp_votes;
+Q.fed_r = Q.fed_votes;
 Q.nsdap_r = Q.nsdap_votes;
 Q.other_r = Q.other_votes;
 
@@ -268,14 +268,14 @@ if (Q.lep_r >= Q.snd_r && Q.lep_r >= Q.nsdap_r) {
 Q.weimar_coalition = Q.snd_r + Q.re_r + Q.z_r - 3;
 Q.grand_coalition = Q.snd_r + Q.re_r + Q.z_r + Q.dvp_r;
 Q.bourgeois_coalition = Q.re_r + Q.z_r + Q.dvp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.re_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
+Q.center_right_coalition = Q.z_r + Q.re_r + Q.dvp_r + Q.other_r + Q.fed_r;
+Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.fed_r;
+Q.far_right_coalition = Q.fed_r + Q.nsdap_r;
 Q.left_coalition = Q.snd_r + Q.lep_r;
 // this is an absurd concept lol
 Q.united_front_coalition = Q.snd_r + Q.lep_r + Q.z_r + Q.re_r - 3;
 Q.anti_democratic_coalition = Q.lep_r + Q.nsdap_r;
-// aka everyone except nazi, lep, dnvp
+// aka everyone except nazi, lep, fed
 Q.neo_weimar_coalition = Q.snd_r + Q.re_r + Q.z_r + Q.dvp_r + Q.other_r;
 !}
 
@@ -299,7 +299,7 @@ Renew: [+ re_r +]
 DVP: [+ dvp_r +]
 
 # 1928: 14, 1930: 7
-DNVP: [+ dnvp_r +]
+FED: [+ fed_r +]
 
 # 1928: 3, 1930: 18
 NSDAP: [+ nsdap_r +]
@@ -315,5 +315,5 @@ Grand Coalition (S&D + Z + BVP + Renew + DVP): [+ grand_coalition +]
 
 Bourgeois Coalition (Z + BVP + Renew + DVP + Others): [+ bourgeois_coalition +]
 
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]
+Right-wing Coalition (Z + BVP + DVP + Others + FED): [+ right_coalition +]
 

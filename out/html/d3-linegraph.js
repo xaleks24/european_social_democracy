@@ -16,13 +16,13 @@ function addMonths(date, months) {
 d3.linegraph = function(noTicks, noDots, parties, partyColors, partyNames, dataMax, dataMin, additionalMonths) {
     /* params */
     if (!parties) {
-        parties = ['snd', 'lep', 're', 'z', 'dvp', 'dnvp', 'nsdap', 'other'];
+        parties = ['snd', 'lep', 're', 'z', 'dvp', 'fed', 'nsdap', 'other'];
     }
     if (!partyColors) {
-        partyColors = {'snd': '#E3000F', 'lep': '#8B0000', 're': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'dnvp': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0'};
+        partyColors = {'snd': '#E3000F', 'lep': '#8B0000', 're': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'fed': '#3f7bc1', 'nsdap': '#954B00', 'other': '#a0a0a0'};
     }
     if (!partyNames) {
-        partyNames = {'snd': 'S&D', 'lep': 'LEP', 're': 'Renew', 'z': 'Z + BVP', 'dvp': 'DVP', 'dnvp': 'DNVP', 'nsdap': 'NSDAP', 'other': 'Others'};
+        partyNames = {'snd': 'S&D', 'lep': 'LEP', 're': 'Renew', 'z': 'Z + BVP', 'dvp': 'DVP', 'fed': 'FED', 'nsdap': 'NSDAP', 'other': 'Others'};
     }
     if (!additionalMonths) {
         additionalMonths = 10;
