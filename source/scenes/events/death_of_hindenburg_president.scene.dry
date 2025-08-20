@@ -33,7 +33,7 @@ The DNVP will nominate Franz Seldte, leader of the Stahlhelm paramilitary group.
 
 Many republicans of the Center, [+ re_name +], and SPD float the idea of running Hugo Eckener, a nationally renowed Zeppelin captain, as a unity candidate. While he has some nationalistic views, he is also ardently opposed to Nazism.
 
-Barring that, the Center and [+ re_name +] are planning to run separate candidates in the first round if the SPD runs its own candidate. The Center is considering nominating Konrad Adenauer, mayor of Köln and member of the Prussian state legislature. He calls for an alliance of conservative Christian democrats that encompasses both Catholics and Protestants. The [+ re_name +] might nominate Otto Gessler, former defense minister, who has crossover appeal to conservatives in the DVP and other parties who dislike the DNVP-NSDAP front.
+Barring that, the Center and [+ re_name +] are planning to run separate candidates in the first round if the SPD runs its own candidate. The Center is considering nominating Konrad Adenauer, mayor of Köln and member of the Prussian state legislature. He calls for an alliance of conservative Christian democrats that encompasses both Catholics and Protestants. [+ re_name +] might nominate Otto Gessler, former defense minister, who has crossover appeal to conservatives in the DVP and other parties who dislike the DNVP-NSDAP front.
 
 As for the SPD, we could support a joint Weimar Coalition candidate or run our own.
 [? if braun_campaign : Otto Braun is tired. He ran and failed in the previous two presidential elections, and no longer wishes to run. His wife is ill enough that he wishes to stay by her side. ?][? if braun_campaign = 0 and not spd_prussia: Otto Braun is tired. After being deposed in Prussia, he has largely retired from politics, and is devoting his time to caring for his dying wife. ?][? if braun_campaign = 0 and spd_prussia : Otto Braun is tired. He does not wish to run, but he is willing to be convinced that he is needed at this moment. His wife is terminally ill, and he does not want more responsibilities. ?]
@@ -52,7 +52,7 @@ Kurt Schumacher is an ambitious rising star in the party, and would be all too w
 
 - @eckener_r1: Support Hugo Eckener as a joint Weimar Coalition candidate.
 - @adenauer_r1: Support Konrad Adenauer of the Center Party.
-- @gessler_r1: Support Otto Gessler of the [+ re_name +].
+- @gessler_r1: Support Otto Gessler of [+ re_name +].
 - @thalmann_r1: Support Ernst Thälmann of the KPD.
 - @munzenberg_r1: Support Willi Münzenberg of the KPD.
 - @braun_r1: Support Otto Braun.
@@ -166,7 +166,7 @@ Albert Einstein is a Nobel Prize-winning scientist, director of the Kaiser Wilhe
 
 He did not wish to run for president, disliking the public nature of campaigning, but we have somehow convinced him that his candidacy will be crucial to the future of Germany and the world. As a Jewish German pacifist, his becoming president would be a repudiation of everything the Nazis stand for.
 
-The [+ re_name +] will endorse Einstein's candidacy.
+[+ re_name +] will endorse Einstein's candidacy.
 
 @mann_r1
 subtitle: -2 resources - He might be too far left for the bourgeois parties.
@@ -290,25 +290,25 @@ With our resources, the Center are convinced to support [+ spd_candidate +]. Kon
 
 
 @convince_re_unity
-title: Convince the [+ re_name +] to support [+ spd_candidate +].
+title: Convince [+ re_name +] to support [+ spd_candidate +].
 view-if: (spd_candidate = "Eckener" or spd_candidate = "Adenauer") and re_candidate != spd_candidate
 on-arrival: re_candidate = spd_candidate if re_relation >= 30
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
-[? if re_candidate = spd_candidate: The [+ re_name +] is easily persuaded to support [+ spd_candidate +]! ?]
-[? if re_candidate != spd_candidate: Unfortunately, the [+ re_name +] is unwilling to support [+ spd_candidate +]. The Weimar Coalition seems to be fracturing. ?]
+[? if re_candidate = spd_candidate: [+ re_name +] is easily persuaded to support [+ spd_candidate +]! ?]
+[? if re_candidate != spd_candidate: Unfortunately, [+ re_name +] is unwilling to support [+ spd_candidate +]. The Weimar Coalition seems to be fracturing. ?]
 
 
 @convince_re_spd
-title: Convince the [+ re_name +] to support [+ spd_candidate +].
+title: Convince [+ re_name +] to support [+ spd_candidate +].
 view-if: (spd_candidate = "Braun" or spd_candidate = "Schumacher" or spd_candidate = "Juchacz"or is_cultural_candidate) and re_candidate != spd_candidate
 on-arrival: re_candidate = spd_candidate if re_relation >= 40
 go-to: r1_menu if round = 0; r2_campaigning if round > 0
 max-visits: 1
 
-[? if re_candidate = spd_candidate: The [+ re_name +] is easily persuaded to support [+ spd_candidate +]! ?]
-[? if re_candidate != spd_candidate: Unfortunately, the [+ re_name +] is unwilling to support [+ spd_candidate +]. ?]
+[? if re_candidate = spd_candidate: [+ re_name +] is easily persuaded to support [+ spd_candidate +]! ?]
+[? if re_candidate != spd_candidate: Unfortunately, [+ re_name +] is unwilling to support [+ spd_candidate +]. ?]
 
 @convince_kpd_spd
 title: Convince the KPD to support [+ spd_candidate +].
@@ -546,7 +546,7 @@ on-arrival: reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; n
 on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; re_candidate = z_candidate if re_candidate = "Braun" or re_candidate = "Schumacher" or re_candidate = "Juchacz"; dvp_candidate = z_candidate if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz"; spd_candidate = "Thälmann"; 
 max-visits: 1
 
-We have switched our endorsement to Ernst Thälmann of the KPD. [? if z_candidate = spd_candidate : Our former allies in the Center Party see this as a betrayal. ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": Now, they will support Konrad Adenauer once again. ?][? if re_candidate = "Braun" or re_candidate = "Schumacher" or re_candidate = "Juchacz": The [+ re_name +] will switch their support to the Center Party candidate. ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": The DVP will also support the Center Party candidate. ?]
+We have switched our endorsement to Ernst Thälmann of the KPD. [? if z_candidate = spd_candidate : Our former allies in the Center Party see this as a betrayal. ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": Now, they will support Konrad Adenauer once again. ?][? if re_candidate = "Braun" or re_candidate = "Schumacher" or re_candidate = "Juchacz": [+ re_name +] will switch their support to the Center Party candidate. ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": The DVP will also support the Center Party candidate. ?]
 
 - @r2_vote: Let the voting begin.
 
@@ -560,7 +560,7 @@ on-arrival: reformist_dissent += 12; center_dissent += 10; labor_dissent += 5; n
 on-departure: z_candidate = "Adenauer" if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz"; re_candidate = z_candidate if re_candidate = "Braun" or re_candidate = "Schumacher" or re_candidate = "Juchacz"; dvp_candidate = z_candidate if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz"; spd_candidate = "Münzenberg"; 
 max-visits: 1
 
-We have switched our endorsement to Willi Münzenberg of the KPD. [? if z_candidate = spd_candidate : Our former allies in the Center Party see this as a betrayal. ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": Now, they will support Konrad Adenauer once again. ?][? if re_candidate = "Braun" or re_candidate = "Schumacher" or re_candidate = "Juchacz": The [+ re_name +] will switch their support to the Center Party candidate. ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": The DVP will also support the Center Party candidate. ?]
+We have switched our endorsement to Willi Münzenberg of the KPD. [? if z_candidate = spd_candidate : Our former allies in the Center Party see this as a betrayal. ?][? if z_candidate = "Braun" or z_candidate = "Schumacher" or z_candidate = "Juchacz": Now, they will support Konrad Adenauer once again. ?][? if re_candidate = "Braun" or re_candidate = "Schumacher" or re_candidate = "Juchacz": [+ re_name +] will switch their support to the Center Party candidate. ?][? if dvp_candidate = "Braun" or dvp_candidate = "Schumacher" or dvp_candidate = "Juchacz": The DVP will also support the Center Party candidate. ?]
 
 - @r2_vote: Let the voting begin.
 

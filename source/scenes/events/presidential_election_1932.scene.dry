@@ -149,7 +149,7 @@ The KPD now endorses Braun in the presidential election! We ask them to keep the
 max-visits: 1
 go-to: convince_liberals_success if dvp_relation >= 50; convince_liberals_fail if dvp_relation < 50
 
-The liberal vote ([+ re_name +] and DVP) has been falling over time, so they will probably be of minimal help to us. For what it's worth, the [+ re_name +] is already willing to support Braun.
+The liberal vote ([+ re_name +] and DVP) has been falling over time, so they will probably be of minimal help to us. For what it's worth, [+ re_name +] is already willing to support Braun.
 
 @convince_liberals_success
 on-arrival: dvp_support_braun = 1
