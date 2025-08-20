@@ -293,7 +293,7 @@ Z + BVP: [+ z_r +]
 KPD: [+ kpd_r +]
 
 # 1928: 5, 1930: 4 (as DstP)
-DDP: [+ re_r +]
+Renew: [+ re_r +]
 
 # 1928: 9, 1930: 5
 DVP: [+ dvp_r +]
@@ -309,11 +309,11 @@ Other: [+ other_r +]
 
 **Potential coalitions:**
 
-Weimar Coalition (SPD + Z + DDP): [+ weimar_coalition +]
+Weimar Coalition (SPD + Z + Renew): [+ weimar_coalition +]
 
-Grand Coalition (SPD + Z + BVP + DDP + DVP): [+ grand_coalition +]
+Grand Coalition (SPD + Z + BVP + Renew + DVP): [+ grand_coalition +]
 
-Bourgeois Coalition (Z + BVP + DDP + DVP + Others): [+ bourgeois_coalition +]
+Bourgeois Coalition (Z + BVP + Renew + DVP + Others): [+ bourgeois_coalition +]
 
 Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]
 

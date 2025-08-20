@@ -132,7 +132,7 @@ go-to: menu
 
 **Catholics** are the largest religious minority, at about 30% of the population. They disproportionately support the Center Party (or the Bavarian People's Party in Bavaria).
 
-**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, mostly the DDP, although substantial numbers support the SPD or KPD.
+**Jews** account for between 0.5% to 1% of the population, and tend to support liberal parties, mostly the Renew, although substantial numbers support the SPD or KPD.
 
 
 @public_opinion
@@ -210,7 +210,7 @@ go-to: menu
 Current relations: [+ z_relation : relationships +]
 
 # TODO: replace this with the german state party after 1930
-**DDP** - *Deutsche Demokratische Partei* (German Democratic Party) - a center-left liberal party, popular among the intelligensia and educated middle class. They have often been in coalitions with us. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
+**Renew** - *Deutsche Demokratische Partei* (German Democratic Party) - a center-left liberal party, popular among the intelligensia and educated middle class. They have often been in coalitions with us. [? if year >= 1930 : They have recently reformed themselves as the German State Party (DStP). ?]
 
 Current relations: [+ re_relation : relationships +]
 
@@ -314,8 +314,8 @@ data = data.concat([
     },
     {
         "id": "re",
-        "legend": "DDP",
-        "name": "DDP",
+        "legend": "Renew",
+        "name": "Renew",
         "seats": Q.re_r*5,
     },
     {

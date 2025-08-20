@@ -317,8 +317,8 @@ Q.old_other_r = 9;
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
 
-// for changing the DDP's name to the DStP
-Q.re_name = "DDP";
+// for changing the Renew's name to the DStP
+Q.re_name = "Renew";
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election
 Q.election_records = [];
@@ -342,12 +342,12 @@ Q.kpd_in_government = 0;
 Q.nsdap_in_government = 0;
 
 Q.in_right_coalition = 0;
-// Weimar coalition = SPD + Z + DDP
+// Weimar coalition = SPD + Z + Renew
 Q.in_weimar_coalition = 0;
-// Grand coalition = SPD + Z + BVP + DDP + DVP
-// also includes the "new grand coalition" of SPD + Z + BVP + DDP + DVP + Others
+// Grand coalition = SPD + Z + BVP + Renew + DVP
+// also includes the "new grand coalition" of SPD + Z + BVP + Renew + DVP + Others
 Q.in_grand_coalition = 0;
-// Popular front = SPD + KPD + Z + DDP
+// Popular front = SPD + KPD + Z + Renew
 Q.in_popular_front = 0;
 // left coalition = SPD + KPD + left-splinters
 Q.in_left_front = 0;
