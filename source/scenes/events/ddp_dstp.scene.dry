@@ -3,7 +3,7 @@ subtitle: The German Democratic Party is becoming the German State Party.
 view-if: year == 1930 and month >= 6
 new-page: true
 max-visits: 1
-on-arrival: ddp_name = "DStP"; ddp_dstp_seen = 1; new_middle_ddp -= 5; old_middle_ddp -= 3; rural_ddp -= 3; ddp_relation -= 5
+on-arrival: re_name = "DStP"; re_dstp_seen = 1; new_middle_re -= 5; old_middle_re -= 3; rural_re -= 3; re_relation -= 5
 tags: event
 
 = DDP Reformation
