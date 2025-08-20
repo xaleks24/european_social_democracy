@@ -203,13 +203,13 @@ Catholics: S&D: [+ catholics_snd_display +]%, Z: [+ catholics_z_display +]%, KPD
 @parties
 go-to: menu
 
-**S&D** - *The Progressive Alliance of Socialists and Democrats* - this is us. We are a semi-socialist and democratic party, mostly but not exclusively favoured by the working class. We are and have long been the second largest of the parties.
+**S&D** - *The Progressive Alliance of Socialists and Democrats* - This is us. We are a semi-socialist and democratic party, mostly but not exclusively favoured by the working class. We are and have long been the second largest of the parties.
 
-**Z** - *Zentrumspartei* (Center Party) - a centrist to center-right Catholic party that supports the Republic, and has historically supported many of our labor, welfare, and anti-militarist priorities. They have often been in coalitions with us. They are often associated with the **BVP** (Bavarian People's Party), which represents Catholics in Bavaria. [? if year >= 1930 or chancellor = "Brüning" : They have appeared to take a more conservative turn recently, with the rise of Brüning and the party leader, Ludwig Kaas. ?]
+**GA** - *Green Alliance* - An enviromentalist and center-left party. They are our closest and most natural allies, and we have often worked together.
 
 Current relations: [+ z_relation : relationships +]
 
-**Renew** *Renew Europe* - Renew Europe is a centrist liberal party. They are socially progressive but economically liberal. We have had relatively close ties for a while now.
+**Renew** *Renew Europe* - A centrist liberal party. They are socially progressive but economically liberal. We have had relatively close ties for a while now.
 
 Current relations: [+ re_relation : relationships +]
 
