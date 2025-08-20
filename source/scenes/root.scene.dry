@@ -317,7 +317,7 @@ Q.old_other_r = 9;
 Q.sapd_r = 0;
 Q.old_sapd_r = 0;
 
-// for changing the Renew's name to the DStP
+// for changing Renew's name to the DStP
 Q.re_name = "Renew";
 
 // array of objects of the form {date: Date(), spd: 10, kpd: 12, ...} for each election

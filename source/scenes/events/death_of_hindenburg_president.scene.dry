@@ -82,7 +82,7 @@ We have endorsed Konrad Adenauer of the Center Party.
 on-arrival: spd_candidate = "Gessler"; re_relation += 4; dvp_candidate = "Seldte" if dvp_relation < 40; is_unity_candidate = 1
 go-to: r1_menu
 
-We have endorsed Otto Gessler, independent formerly of the Renew.
+We have endorsed Otto Gessler, independent formerly of Renew.
 
 [? if dvp_relation < 40 : With our support of Gessler, the DVP components supporting him have broken away and are now shifting their support to Seldte. ?]
 
@@ -380,7 +380,7 @@ Goring: "Hermann Göring of the NSDAP",
 Seldte: "Franz Seldte of the Stahlhelm/DNVP",
 Eckener: "the independent republican candidate Hugo Eckener",
 Adenauer: "Konrad Adenauer of the Center Party",
-Gessler: "Otto Gessler, independent formerly of the Renew",
+Gessler: "Otto Gessler, independent formerly of Renew",
 Thalmann: "Ernst Thälmann of the KPD",
 Munzenberg: "Willi Münzenberg of the KPD",
 Braun: "Otto Braun of the SPD",
@@ -584,7 +584,7 @@ view-if: re_candidate = "Gessler" and spd_candidate != re_candidate
 on-departure: kpd_candidate = "Thälmann" if kpd_candidate == spd_candidate and kpd_party_leader != "Conciliators"; kpd_candidate = "Münzenberg" if kpd_candidate == spd_candidate and kpd_party_leader == "Conciliators"; sapd_candidate = kpd_candidate; spd_candidate = "Gessler"; re_relation += 4; dvp_candidate = "Seldte" if dvp_relation < 40; is_unity_candidate = 1
 go-to: r2_campaigning
 
-We have endorsed Otto Gessler, independent formerly of the Renew.
+We have endorsed Otto Gessler, independent formerly of Renew.
 
 [? if dvp_relation < 40 : With our support of Gessler, the DVP components supporting him have broken away and are now shifting their support to Seldte. ?]
 

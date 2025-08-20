@@ -433,7 +433,7 @@ Minor changes:
 - The "second round" trick for winning the 1932 presidential election should no longer be possible.
 - High inflation threshold is lower.
 - March on Berlin can happen multiple times.
-- Finally, the Renew becoming the DStP is visible.
+- Finally, Renew becoming the DStP is visible.
 - Decimals for presidential elections.
 - Bourgeois party support begins to rise after Return to Normalcy is seen.
 - Various other tweaks...
