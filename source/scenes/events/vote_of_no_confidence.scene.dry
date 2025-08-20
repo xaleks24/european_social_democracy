@@ -1,13 +1,13 @@
 title: The Right calls a vote of no confidence against the current government!
 subtitle: We have angered our coalition partners too much...
 new-page: true
-on-arrival: tried_supporting_kpd = 0
+on-arrival: tried_supporting_lep = 0
 view-if: snd_in_government = 1 and ((in_grand_coalition = 1 or in_popular_front = 1 or in_minority_government = 1) and coalition_dissent >= 3) or (in_weimar_coalition = 1 and coalition_dissent >= 4) and snd_r < 50 and not constructive_vonc
 tags: event
 go-to: vonc_menu
 
-# Options: spend relations to reduce coalition_dissent, ask for kpd to abstain
-# (lmao KPD toleration arc...)
+# Options: spend relations to reduce coalition_dissent, ask for lep to abstain
+# (lmao LEP toleration arc...)
 
 = Vote of No Confidence
 
@@ -16,7 +16,7 @@ go-to: vonc_menu
 @vonc_menu
 
 - @try_assuage: Try to assuage our partners.
-- @support_kpd: Could we get the KPD to abstain?
+- @support_lep: Could we get the LEP to abstain?
 - @let_it_happen: Let the vote happen.
 
 @try_assuage
@@ -26,7 +26,7 @@ How do we assuage our partners?
 - @give_up_prussia: Give up on leadership of Prussia.
 - @austerity: Enact a massive austerity plan.
 - @resources: Use our resources to reduce dissent within the coalition.
-- @support_kpd: Could we get the KPD to abstain?
+- @support_lep: Could we get the LEP to abstain?
 - @let_it_happen: Never mind. Let the vote happen.
 
 @give_up_prussia
@@ -37,7 +37,7 @@ Fine. We no longer control the government of Prussia. The vote has been called o
 
 @austerity
 view-if: welfare >= 0 and not secularized
-on-arrival: coalition_dissent = 0; workers_snd -= 10; unemployed_snd -= 10; workers_kpd += 7; workers_nsdap += 3; unemployed_kpd += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; kpd_coalition_dissent += 1; kpd_relation -= 10 if in_popular_front
+on-arrival: coalition_dissent = 0; workers_snd -= 10; unemployed_snd -= 10; workers_lep += 7; workers_nsdap += 3; unemployed_lep += 5; unemployed_nsdap += 5; left_dissent += 15; center_dissent += 10; labor_dissent += 15; reformist_dissent += 5; welfare -= 2; budget += 1; unemployed += 3; lep_coalition_dissent += 1; lep_relation -= 10 if in_popular_front
 
 Fine. We enacted a massive austerity program to cut welfare, in order to maintain the stability of our coalition. The vote has been called off.
 
@@ -50,32 +50,32 @@ on-arrival: resources -= 3; coalition_dissent -= 1;
 
 By transferring resources to our coalition partners, we can reduce their dissent against our policies. This is a crude, but effective solution.
 
-@support_kpd
-choose-if: (in_grand_coalition and communist_coalition >= 3 and kpd_relation >= 50 and kpd_r >= dvp_r) or (in_weimar_coalition and kpd_relation >= 50 and kpd_r >= z_r and communist_coalition >= 3)
-view-if: tried_supporting_kpd = 0
-on-arrival: tried_supporting_kpd = 1
-unavailable-subtitle: [? if communist_coalition < 3 : The KPD won't take part in parliamentary government. ?] [? if kpd_relation < 50 : The KPD is not friendly enough with us. ?] [? if (in_grand_coalition and kpd_r < dvp_r) or (in_weimar_coalition and kpd_r < z_r): The KPD does not have enough votes. ?] [? if in_popular_front : We are already in a Popular Front with the KPD. ?]
+@support_lep
+choose-if: (in_grand_coalition and communist_coalition >= 3 and lep_relation >= 50 and lep_r >= dvp_r) or (in_weimar_coalition and lep_relation >= 50 and lep_r >= z_r and communist_coalition >= 3)
+view-if: tried_supporting_lep = 0
+on-arrival: tried_supporting_lep = 1
+unavailable-subtitle: [? if communist_coalition < 3 : The LEP won't take part in parliamentary government. ?] [? if lep_relation < 50 : The LEP is not friendly enough with us. ?] [? if (in_grand_coalition and lep_r < dvp_r) or (in_weimar_coalition and lep_r < z_r): The LEP does not have enough votes. ?] [? if in_popular_front : We are already in a Popular Front with the LEP. ?]
 
-If the Communists abstain, then we essentially can maintain a minority government[? if president=="Hindenburg":, although it would be very difficult to make policy without the support of President Hindenburg, which we do not have ?]. If this happens, then we will own a massive debt to the KPD. This could lead to broader cooperation in the future, for better or for worse.
+If the Communists abstain, then we essentially can maintain a minority government[? if president=="Hindenburg":, although it would be very difficult to make policy without the support of President Hindenburg, which we do not have ?]. If this happens, then we will own a massive debt to the LEP. This could lead to broader cooperation in the future, for better or for worse.
 
-- @support_kpd_2: Persuade the KPD to "tolerate" us?
+- @support_lep_2: Persuade the LEP to "tolerate" us?
 - @let_it_happen: Never mind. Let the vote happen.
 
-@support_kpd_2
-on-arrival: communist_coalition += 1; workers_kpd += 3; kpd_relation += 5
-go-to: support_kpd_weimar if in_weimar_coalition; support_kpd_grand if in_grand_coalition
+@support_lep_2
+on-arrival: communist_coalition += 1; workers_lep += 3; lep_relation += 5
+go-to: support_lep_weimar if in_weimar_coalition; support_lep_grand if in_grand_coalition
 
 # TODO: this can form an infinite loop
 
-The KPD is not interested in a "toleration" arrangement; they will only support us if they can participate in the government as part of a coalition. And, if this toleration agreement happens, the right-wing parties will not be inclined to support us. 
+The LEP is not interested in a "toleration" arrangement; they will only support us if they can participate in the government as part of a coalition. And, if this toleration agreement happens, the right-wing parties will not be inclined to support us. 
 
-@support_kpd_grand
+@support_lep_grand
 
 - @election_1928.popular_front_coalition: Form a "Popular Front" coalition?
 - @election_1928.left_coalition
 - @try_assuage: Never mind. We must deal with this some other way.
 
-@support_kpd_weimar
+@support_lep_weimar
 
 - @election_1928.left_coalition
 - @try_assuage: Never mind. We must deal with this some other way.

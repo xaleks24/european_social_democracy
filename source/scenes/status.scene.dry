@@ -25,7 +25,7 @@ S&D position: [? if snd_toleration : toleration ?][? if snd_in_government : in g
 
 [? if snd_in_government and not in_snd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if snd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if snd_in_government and (in_left_front or in_popular_front): LEP coalition dissent: [+ lep_coalition_dissent : coalition_dissent +] ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -43,7 +43,7 @@ Reichstag composition:
 # 1928: 15, 1930: 15, 1932: 
 {!<span class="tooltip-text" title="Center Party + Bavarian People's Party">Z + BVP</span>!}: [+ z_r +]%
 # 1928: 10, 1930: 13
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_r +]%
+{!<span class="tooltip-text" title="Communist Party of Germany">LEP</span>!}: [+ lep_r +]%
 # 1928: 5, 1930: 4 (as DstP)
 {!<span class="tooltip-text" title="German Democratic Party">!}[? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]{!</span>!}: [+ re_r +]%
 # 1928: 9, 1930: 5
@@ -82,7 +82,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_relation : relationships +]
+{!<span class="tooltip-text" title="Communist Party of Germany">LEP</span>!}: [+ lep_relation : relationships +]
 
 {!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
 
@@ -90,7 +90,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the S&D
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the LEP.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
 {!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
@@ -123,7 +123,7 @@ if (Q.sa_strength) {
 
 Reichsbanner Militarization: [+ rb_militancy : militancy +]
 
-{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the KPD.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
+{!<span class="tooltip-text" title="The RFB (Rotfrontkämpferbund) is a communist group associated with the LEP.">RFB</span>!} Strength: [+ rfb_strength_2 +] thousand
 
 RFB Militarization: [+ rfb_militancy : militancy +]
 
@@ -164,7 +164,7 @@ S&D: [+ snd_votes +]%
 
 Z + BVP: [+ z_votes +]%
 
-KPD: [+ kpd_votes +]%
+LEP: [+ lep_votes +]%
 
 [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ re_votes +]%
 
@@ -178,16 +178,16 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: S&D: [+ workers_snd_display +]%, Z: [+ workers_z_display +]%, KPD: [+ workers_kpd_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ workers_re_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: S&D: [+ workers_snd_display +]%, Z: [+ workers_z_display +]%, LEP: [+ workers_lep_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ workers_re_display +]%, DVP: [+ workers_dvp_display +]%; DNVP: [+ workers_dnvp_display +]%, NSDAP: [+ workers_nsdap_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: S&D: [+ new_middle_snd_display +]%, Z: [+ new_middle_z_display +]%, KPD: [+ new_middle_kpd_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ new_middle_re_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: S&D: [+ new_middle_snd_display +]%, Z: [+ new_middle_z_display +]%, LEP: [+ new_middle_lep_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ new_middle_re_display +]%, DVP: [+ new_middle_dvp_display +]%; DNVP: [+ new_middle_dnvp_display +]%, NSDAP: [+ new_middle_nsdap_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: S&D: [+ old_middle_snd_display +]%, Z: [+ old_middle_z_display +]%, KPD: [+ old_middle_kpd_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ old_middle_re_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: S&D: [+ old_middle_snd_display +]%, Z: [+ old_middle_z_display +]%, LEP: [+ old_middle_lep_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ old_middle_re_display +]%, DVP: [+ old_middle_dvp_display +]%; DNVP: [+ old_middle_dnvp_display +]%, NSDAP: [+ old_middle_nsdap_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: S&D: [+ rural_snd_display +]%, Z: [+ rural_z_display +]%, KPD: [+ rural_kpd_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ rural_re_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: S&D: [+ rural_snd_display +]%, Z: [+ rural_z_display +]%, LEP: [+ rural_lep_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ rural_re_display +]%, DVP: [+ rural_dvp_display +]%; DNVP: [+ rural_dnvp_display +]%, NSDAP: [+ rural_nsdap_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: S&D: [+ unemployed_snd_display +]%, Z: [+ unemployed_z_display +]%, KPD: [+ unemployed_kpd_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ unemployed_re_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: S&D: [+ unemployed_snd_display +]%, Z: [+ unemployed_z_display +]%, LEP: [+ unemployed_lep_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ unemployed_re_display +]%, DVP: [+ unemployed_dvp_display +]%; DNVP: [+ unemployed_dnvp_display +]%, NSDAP: [+ unemployed_nsdap_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: S&D: [+ catholics_snd_display +]%, Z: [+ catholics_z_display +]%, KPD: [+ catholics_kpd_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ catholics_re_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: S&D: [+ catholics_snd_display +]%, Z: [+ catholics_z_display +]%, LEP: [+ catholics_lep_display +]%, [? if not re_name: Renew?][? if re_name != 0 : [+ re_name +]?]: [+ catholics_re_display +]%, DVP: [+ catholics_dvp_display +]%; DNVP: [+ catholics_dnvp_display +]%, NSDAP: [+ catholics_nsdap_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 Support for the Republic: [+ pro_republic_disp +]%

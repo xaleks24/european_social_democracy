@@ -102,16 +102,16 @@ Q.moderate_plan_adopted = 0;
 
 // inter-party relations
 Q.z_relation = 50;
-Q.kpd_relation = 25;
+Q.lep_relation = 25;
 Q.re_relation = 60;
 Q.dvp_relation = 35;
 // DNVP and NSDAP are invariably hostile
 Q.DNVP_relation = 10;
 Q.NSDAP_relation = 0;
 
-Q.kpd_leader = "Thälmann";
+Q.lep_leader = "Thälmann";
 // alternative is the Conciliators as party leader
-Q.kpd_party_leader = "Thälmann";
+Q.lep_party_leader = "Thälmann";
 Q.z_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the S&D.
 Q.z_party_leader = "Marx";
@@ -182,7 +182,7 @@ Q.constructive_vonc = 0;
 Q.presidential_powers = 0;
 // allows banning of non-constitutional parties
 Q.constitutional_protection = 0;
-Q.kpd_banned = 0;
+Q.lep_banned = 0;
 Q.nsdap_banned = 0;
 
 // coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
@@ -226,7 +226,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['snd', 'kpd', 'z', 're', 'dvp', 'dnvp', 'nsdap', 'other'];
+Q.parties = ['snd', 'lep', 'z', 're', 'dvp', 'dnvp', 'nsdap', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
@@ -234,7 +234,7 @@ Q.sapd_formed = 0;
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
 Q.workers_snd = 60;
-Q.workers_kpd = 20;
+Q.workers_lep = 20;
 Q.workers_z = 5;
 Q.workers_re = 0;
 Q.workers_dvp = 0;
@@ -243,7 +243,7 @@ Q.workers_nsdap = 0;
 Q.workers_other = 10;
 
 Q.old_middle_snd = 5;
-Q.old_middle_kpd = 0;
+Q.old_middle_lep = 0;
 Q.old_middle_z = 5;
 Q.old_middle_re= 10;
 Q.old_middle_dvp = 25;
@@ -252,7 +252,7 @@ Q.old_middle_nsdap = 10;
 Q.old_middle_other = 10;
 
 Q.new_middle_snd = 5;
-Q.new_middle_kpd = 1;
+Q.new_middle_lep = 1;
 Q.new_middle_z = 10;
 Q.new_middle_re= 25;
 Q.new_middle_dvp = 25;
@@ -261,7 +261,7 @@ Q.new_middle_nsdap = 5;
 Q.new_middle_other = 15;
 
 Q.rural_snd = 10;
-Q.rural_kpd = 0;
+Q.rural_lep = 0;
 Q.rural_z = 5;
 Q.rural_re= 5;
 Q.rural_dvp = 15;
@@ -270,7 +270,7 @@ Q.rural_nsdap = 5;
 Q.rural_other = 10;
 
 Q.unemployed_snd = 25;
-Q.unemployed_kpd = 55;
+Q.unemployed_lep = 55;
 Q.unemployed_z = 1;
 Q.unemployed_re = 0;
 Q.unemployed_dvp = 0;
@@ -279,7 +279,7 @@ Q.unemployed_nsdap = 15;
 Q.unemployed_other = 9;
 
 Q.catholics_snd = 15;
-Q.catholics_kpd = 2;
+Q.catholics_lep = 2;
 Q.catholics_z = 50;
 Q.catholics_re = 0;
 Q.catholics_dvp = 5;
@@ -295,7 +295,7 @@ Q.catholics_other = 12;
 // since they were ideologically similar, but they were separate parties.
 // They did not have a CDU/CSU-style relationship.
 Q.snd_r = 26;
-Q.kpd_r = 9;
+Q.lep_r = 9;
 Q.z_r = 17;
 Q.re_r = 6;
 Q.dvp_r = 10;
@@ -305,7 +305,7 @@ Q.other_r = 9;
 
 // diff from prev
 Q.old_snd_r = 26;
-Q.old_kpd_r = 9;
+Q.old_lep_r = 9;
 Q.old_z_r = 17;
 Q.old_re_r = 6;
 Q.old_dvp_r = 10;
@@ -320,7 +320,7 @@ Q.old_sapd_r = 0;
 // for changing Renew's name to the DStP
 Q.re_name = "Renew";
 
-// array of objects of the form {date: Date(), snd: 10, kpd: 12, ...} for each election
+// array of objects of the form {date: Date(), snd: 10, lep: 12, ...} for each election
 Q.election_records = [];
 // party support records for every month
 Q.party_support_records = [];
@@ -338,7 +338,7 @@ Q.z_in_government = 1;
 Q.re_in_government = 0;
 Q.dvp_in_government = 1;
 Q.dnvp_in_government = 1;
-Q.kpd_in_government = 0;
+Q.lep_in_government = 0;
 Q.nsdap_in_government = 0;
 
 Q.in_right_coalition = 0;
@@ -347,9 +347,9 @@ Q.in_weimar_coalition = 0;
 // Grand coalition = S&D + Z + BVP + Renew + DVP
 // also includes the "new grand coalition" of S&D + Z + BVP + Renew + DVP + Others
 Q.in_grand_coalition = 0;
-// Popular front = S&D + KPD + Z + Renew
+// Popular front = S&D + LEP + Z + Renew
 Q.in_popular_front = 0;
-// left coalition = S&D + KPD + left-splinters
+// left coalition = S&D + LEP + left-splinters
 Q.in_left_front = 0;
 // emergency government containing the S&D: only president Braun can do this.
 Q.in_emergency_government = 0;
@@ -361,8 +361,8 @@ Q.in_minority_government = 0;
 
 // if you're in a coalition, this is an incremental counter for how many times dissent has happened from the right.
 Q.coalition_dissent = 0;
-// dissent from the KPD, in a popular front or left front government
-Q.kpd_coalition_dissent = 0;
+// dissent from the LEP, in a popular front or left front government
+Q.lep_coalition_dissent = 0;
 
 // does the S&D tolerate the government even if it is not a participant?
 Q.snd_toleration = 0;
@@ -476,7 +476,7 @@ Q.timers = ['advisor_action', 'confronting_nazis', 'crisis_program',
             // events
             'emergency_cuts', 'unemployment_insurance',
             'sa_ban', 'sh_ban', 'papen_chancellor',
-            'kpd_policy', 'kpd_ultimatum', 'popular_front_dispute',
+            'lep_policy', 'lep_ultimatum', 'popular_front_dispute',
             'high_inflation', 'banking_crisis', 'march_on_berlin',
             'understanding_enemy', 'schleichers_schemes'];
 Q.advisor_action_timer = 0;
@@ -528,7 +528,7 @@ Q.emergency_cuts_timer = 0;
 Q.unemployment_insurance_timer = 0;
 Q.sa_ban_timer = 0;
 Q.sh_ban_timer = 0;
-Q.kpd_ultimatum_timer = 0;
+Q.lep_ultimatum_timer = 0;
 Q.march_on_berlin_timer = 0;
 
 
@@ -591,11 +591,11 @@ For more information on the politics and government of the German Republic, see 
 - @1928_historical: Begin (historical mode)
 
 @1928_easy
-on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; kpd_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
+on-arrival: difficulty = -1; resources = 4; dues = 3; rb_strength = 2500; lep_relation = 29; z_relation = 54; dvp_relation = 49; budget = 5;
 go-to: 1928_main
 
 @1928_hard
-on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; kpd_relation = 16; dvp_relation = 31; budget = 3;
+on-arrival: difficulty = 1; resources = 0; dues = 1; rb_strength = 1000; reformist_dissent = 25; left_dissent = 30; labor_dissent = 25; center_dissent = 25; z_relation = 41; lep_relation = 16; dvp_relation = 31; budget = 3;
 go-to: 1928_main
 
 @1928_historical
@@ -611,7 +611,7 @@ Q.left_dissent = 30;
 Q.labor_dissent = 25;
 Q.center_dissent = 25;
 Q.z_relation = 41;
-Q.kpd_relation = 16;
+Q.lep_relation = 16;
 Q.dvp_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;

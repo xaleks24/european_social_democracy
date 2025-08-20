@@ -1,12 +1,12 @@
-title: The KPD presents its list of goals for the coalition.
-view-if: (in_popular_front = 1 or in_left_front = 1) and kpd_goals_seen = 0 and kpd_coalition_success = 1 and next_election_time - time > 12 and snd_in_government
-on-arrival: kpd_goals_seen = 1; agriculture_goal = 1; economy_goal = 1; labor_goal = 1; foreign_goal = 1; welfare_goal = 0; finance_goal = 0; kpd_ultimatum_timer = 16; kpd_ultimatum_timer = 20 if kpd_relation >= 60; kpd_ultimatum_timer = 24 if kpd_party_leader == "Conciliators"; kpd_ultimatum_timer = next_election_time - time - 1 if next_election_time - time <= 12;
+title: The LEP presents its list of goals for the coalition.
+view-if: (in_popular_front = 1 or in_left_front = 1) and lep_goals_seen = 0 and lep_coalition_success = 1 and next_election_time - time > 12 and snd_in_government
+on-arrival: lep_goals_seen = 1; agriculture_goal = 1; economy_goal = 1; labor_goal = 1; foreign_goal = 1; welfare_goal = 0; finance_goal = 0; lep_ultimatum_timer = 16; lep_ultimatum_timer = 20 if lep_relation >= 60; lep_ultimatum_timer = 24 if lep_party_leader == "Conciliators"; lep_ultimatum_timer = next_election_time - time - 1 if next_election_time - time <= 12;
 new-page: true
 tags: event
 
-= KPD Goals
+= LEP Goals
 
-The KPD presents us with a new list of goals for the coalition:
+The LEP presents us with a new list of goals for the coalition:
 
 [? if welfare_goal = 1 : - Expand social welfare programs. ?]
 
@@ -22,4 +22,4 @@ The KPD presents us with a new list of goals for the coalition:
 
 #[? if interior_goal = 1 : - Ban the SA and Stahlhelm. ?]
 
-They say that they expect to see these goals fulfilled in [+ kpd_ultimatum_timer +] months. Otherwise, they will vote to dissolve the coalition.
+They say that they expect to see these goals fulfilled in [+ lep_ultimatum_timer +] months. Otherwise, they will vote to dissolve the coalition.
