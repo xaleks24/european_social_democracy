@@ -4,7 +4,7 @@ view-if: year = 1932 and (month = 4 or month = 5) and presidential_election_seen
 frequency: 1000
 max-visits: 1
 new-page: true
-on-arrival: braun_campaign = 0; hitler_support_hindenburg = 0; presidential_election_seen = 1; nsdap_candidate = "Hitler" if hitler_deported == 0 else nsdap_candidate = "Göring";
+on-arrival: braun_campaign = 0; hitler_support_hindenburg = 0; presidential_election_seen = 1; ufcp_candidate = "Hitler" if hitler_deported == 0 else ufcp_candidate = "Göring";
 tags: event
 go-to: election_algorithm
 set-jump: pres_election
@@ -15,7 +15,7 @@ face-image: img/hindenburg_election.jpg
 The presidential election is coming up soon. [? if snd_in_government = 0 : While the position of Chancellor is typically more important, recent governments have depended on the president's emergency decree powers, making the office vital. ?] [? if hitler_deported==0 : The Nazis will run Hitler, while the LEP will run Thälmann. A victory for Hitler would mean the end of parliamentary democracy, and the beginning of an era of unspeakable horrors. ?][? if hitler_deported==1 : Since Hitler has been deported, the Nazis will run Hermann Göring in his stead. He is widely seen as a proxy for Hitler, who, despite his legal persecution, retains a popular base who wishes to see him returned to Germany. Meanwhile, the LEP will run Ernst Thälmann. ?]
 [? if sapd_formed: The SAPD, our former leftists, are supporting Thälmann of the LEP, and will likely share an endorsement with the Communists. ?]
 
-# if hitler is deported, who would nsdap run? Duesterberg? or Goering?
+# if hitler is deported, who would ufcp run? Duesterberg? or Goering?
 # Goering runs, essentially as a proxy for Hitler, who is now stateless.
 
 Many are calling for us to support the incumbent Hindenburg, despite his well-known reactionary tendencies. Is he truly the best bulwark against Hitler's ascension? On the other hand, many in our party are calling for Otto Braun to run again, but he is reluctant.
@@ -179,7 +179,7 @@ Q.hitler_votes = 0;
 Q.thalmann_votes = 0;
 
 // initial phase:
-Q.hitler_votes += Q.nsdap_normalized;
+Q.hitler_votes += Q.ufcp_normalized;
 Q.hindenburg_votes += Q.other_normalized;
 Q.hindenburg_votes += Q.fed_normalized;
 
@@ -221,8 +221,8 @@ if (Q.braun_campaign) {
     Q.thalmann_votes += Q.lep_normalized;
 }
 if (Q.hitler_support_hindenburg) {
-    Q.hitler_votes -= Q.nsdap_normalized;
-    Q.hindenburg_votes += Q.nsdap_normalized;
+    Q.hitler_votes -= Q.ufcp_normalized;
+    Q.hindenburg_votes += Q.ufcp_normalized;
 }
 
 if (Q.hindenburg_to_braun_bonus) {
@@ -266,7 +266,7 @@ Results:
 
 Hindenburg - [+ hindenburg_votes_disp +]%
 
-[+ nsdap_candidate +] - [+ hitler_votes_disp +]%
+[+ ufcp_candidate +] - [+ hitler_votes_disp +]%
 
 [? if lep_support_braun == 0 : Thälmann - [+ thalmann_votes_disp +]% ?]
 
@@ -278,7 +278,7 @@ go-to: round2_menu
 
 There is no majority in this round. In the second round, any candidate who wins a plurality will win overall. What should we do?
 
-[? if braun_plurality or thalmann_plurality : In order to consolidate the vote for the Right, and to prevent a socialist from becoming president, [+ nsdap_candidate +] is no longer running in the second round, and has switched his endorsement to Hindenburg. ?]
+[? if braun_plurality or thalmann_plurality : In order to consolidate the vote for the Right, and to prevent a socialist from becoming president, [+ ufcp_candidate +] is no longer running in the second round, and has switched his endorsement to Hindenburg. ?]
 
 
 @round2_menu
@@ -321,7 +321,7 @@ on-departure: hitler_support_hindenburg = 1 if braun_votes + z_votes > hitler_vo
 
 [? if hitler_support_hindenburg : The Center's opinion is affected by the Nazis' support of Hindenburg, and is willing to turn away from him. ?] The Center are convinced! They will be part of the Braun coalition. [? if hitler_support_hindenburg : In addition, they will also bring in some minor parties who will support us. ?]
 
-[? if not hitler_support_hindenburg and braun_votes + z_votes > hitler_votes: With the Center Party supporting Braun, [+ nsdap_candidate +] has dropped out of the race, and the Nazis have endorsed Hindenburg to prevent a socialist from becoming president. ?]
+[? if not hitler_support_hindenburg and braun_votes + z_votes > hitler_votes: With the Center Party supporting Braun, [+ ufcp_candidate +] has dropped out of the race, and the Nazis have endorsed Hindenburg to prevent a socialist from becoming president. ?]
 
 @r2_z_partial
 
@@ -340,7 +340,7 @@ go-to: round2_menu
 
 With our resources, the Center are convinced to support Braun over Hindenburg.
 
-[? if not hitler_support_hindenburg and braun_votes + z_votes > hitler_votes: With the Center Party supporting Braun, [+ nsdap_candidate +] has dropped out of the race, and the Nazis have endorsed Hindenburg to prevent a socialist from becoming president. ?]
+[? if not hitler_support_hindenburg and braun_votes + z_votes > hitler_votes: With the Center Party supporting Braun, [+ ufcp_candidate +] has dropped out of the race, and the Nazis have endorsed Hindenburg to prevent a socialist from becoming president. ?]
 
 @r2_z_failed
 go-to: round2_menu
@@ -430,10 +430,10 @@ Ernst Thälmann of the LEP has won the presidency. Immediately, the far-right la
 - @civil_war: This is civil war.
 
 @hitler_wins
-on-arrival: president = nsdap_candidate; chancellor = "Hitler"; chancellor_party = "NSDAP"
+on-arrival: president = ufcp_candidate; chancellor = "Hitler"; chancellor_party = "UFCP"
 
-[? if nsdap_candidate == "Hitler" : Adolf Hitler of the NSDAP has won the presidency. He wastes no time in consolidating power. ?]
-[? if nsdap_candidate != "Hitler" : The NSDAP candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
+[? if ufcp_candidate == "Hitler" : Adolf Hitler of the UFCP has won the presidency. He wastes no time in consolidating power. ?]
+[? if ufcp_candidate != "Hitler" : The UFCP candidate [+ president +] has won. The first action President [+ president +] takes is inviting Hitler back into Germany, and appointing him chancellor. The Nazis waste no time in consolidating power. ?]
 
 - @hitler_takes_power: What do we do now?
 

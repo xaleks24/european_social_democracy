@@ -1,14 +1,14 @@
 title: Nazis in Crisis
-subtitle: Finally, the internal contradictions of the NSDAP have caught up to it.
-view-if: year = 1933 and month >= 9 and nsdap_r >= 8 and nsdap_normalized + fed_normalized < 0.5
-on-arrival: workers_nsdap -= 12; new_middle_nsdap -= 12; old_middle_nsdap -= 12; rural_nsdap -= 12; unemployed_nsdap -= 10; sa_strength *= 0.7; coup_progress -= 4 if coup_progress > 4; new_middle_re += 6; new_middle_dvp += 6; old_middle_re += 5; old_middle_dvp += 5; old_middle_fed += 3; rural_fed += 6; rural_re += 2; rural_dvp += 2; unemployed_lep += 4; unemployed_snd += 4
+subtitle: Finally, the internal contradictions of the UFCP have caught up to it.
+view-if: year = 1933 and month >= 9 and ufcp_r >= 8 and ufcp_normalized + fed_normalized < 0.5
+on-arrival: workers_ufcp -= 12; new_middle_ufcp -= 12; old_middle_ufcp -= 12; rural_ufcp -= 12; unemployed_ufcp -= 10; sa_strength *= 0.7; coup_progress -= 4 if coup_progress > 4; new_middle_re += 6; new_middle_dvp += 6; old_middle_re += 5; old_middle_dvp += 5; old_middle_fed += 3; rural_fed += 6; rural_re += 2; rural_dvp += 2; unemployed_lep += 4; unemployed_snd += 4
 max-visits: 1
 new-page: true
 #tags: event
 
 = Nazis in Crisis
 
-Finally, the internal contradictions of the NSDAP have caught up to it. With the improving economic conditions, many business leaders are less interested in supporting them. Tensions between their remaining big capitalist funders and their lower middle class frontliners have come to a head, leading to desertions and public spats. This all saps Hitler's aura of strength, weakening Nazi support across a variety of demographics.
+Finally, the internal contradictions of the UFCP have caught up to it. With the improving economic conditions, many business leaders are less interested in supporting them. Tensions between their remaining big capitalist funders and their lower middle class frontliners have come to a head, leading to desertions and public spats. This all saps Hitler's aura of strength, weakening Nazi support across a variety of demographics.
 
 - @celebrate: This is an occasion to celebrate.
 - @complacency: The Nazis are still a threat. We must not be too complacent.

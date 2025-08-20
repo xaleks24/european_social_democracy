@@ -49,8 +49,8 @@ if (Q.lep_relation >= 60) {
 // general strike strength
 // maximum (given 25 labor strength) is 400
 // use normalized workers_snd instead of labor_strength?
-Q.normalized_workers_snd = 100*Q.workers_snd/(Q.workers_snd + Q.workers_lep + Q.workers_nsdap + Q.workers_other + Q.workers_fed + Q.workers_z);
-Q.normalized_workers_lep = 100*Q.workers_lep/(Q.workers_snd + Q.workers_lep + Q.workers_nsdap + Q.workers_other + Q.workers_fed + Q.workers_z);
+Q.normalized_workers_snd = 100*Q.workers_snd/(Q.workers_snd + Q.workers_lep + Q.workers_ufcp + Q.workers_other + Q.workers_fed + Q.workers_z);
+Q.normalized_workers_lep = 100*Q.workers_lep/(Q.workers_snd + Q.workers_lep + Q.workers_ufcp + Q.workers_other + Q.workers_fed + Q.workers_z);
 Q.normalized_workers_total = Q.normalized_workers_snd;
 if (Q.lep_relation >= 60) {
     Q.normalized_workers_total += Q.normalized_workers_lep;

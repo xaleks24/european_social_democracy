@@ -105,9 +105,9 @@ Q.z_relation = 50;
 Q.lep_relation = 25;
 Q.re_relation = 60;
 Q.dvp_relation = 35;
-// FED and NSDAP are invariably hostile
+// FED and UFCP are invariably hostile
 Q.FED_relation = 10;
-Q.NSDAP_relation = 0;
+Q.UFCP_relation = 0;
 
 Q.lep_leader = "Thälmann";
 // alternative is the Conciliators as party leader
@@ -115,7 +115,7 @@ Q.lep_party_leader = "Thälmann";
 Q.z_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the S&D.
 Q.z_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
+Q.ufcp_leader = "Hitler";
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
@@ -123,7 +123,7 @@ Q.hindenburg_relation = 25;
 
 // Does the S&D lead in Prussia?
 Q.snd_prussia = 1;
-// Options: snd, z, fed, papen, nsdap
+// Options: snd, z, fed, papen, ufcp
 Q.prussian_government = "S&D";
 
 // The array of forces - paramilitary groups
@@ -183,7 +183,7 @@ Q.presidential_powers = 0;
 // allows banning of non-constitutional parties
 Q.constitutional_protection = 0;
 Q.lep_banned = 0;
-Q.nsdap_banned = 0;
+Q.ufcp_banned = 0;
 
 // coups and capital strikes happen when you upset the right or the capitalists too much with your policies. they're an additional check on your policies, when purely electoral checks don't suffice.
 // when coup_progress reaches 10 or capital_strike_progress reaches 10, there's a special event that launches the coup.
@@ -226,7 +226,7 @@ Q.old_middle_qol = 100;
 Q.new_middle_qol = 100;
 
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
-Q.parties = ['snd', 'lep', 'z', 're', 'dvp', 'fed', 'nsdap', 'other'];
+Q.parties = ['snd', 'lep', 'z', 're', 'dvp', 'fed', 'ufcp', 'other'];
 
 // TODO: add 'sapd' later on
 Q.sapd_formed = 0;
@@ -239,7 +239,7 @@ Q.workers_z = 5;
 Q.workers_re = 0;
 Q.workers_dvp = 0;
 Q.workers_fed = 5;
-Q.workers_nsdap = 0;
+Q.workers_ufcp = 0;
 Q.workers_other = 10;
 
 Q.old_middle_snd = 5;
@@ -248,7 +248,7 @@ Q.old_middle_z = 5;
 Q.old_middle_re= 10;
 Q.old_middle_dvp = 25;
 Q.old_middle_fed = 25;
-Q.old_middle_nsdap = 10;
+Q.old_middle_ufcp = 10;
 Q.old_middle_other = 10;
 
 Q.new_middle_snd = 5;
@@ -257,7 +257,7 @@ Q.new_middle_z = 10;
 Q.new_middle_re= 25;
 Q.new_middle_dvp = 25;
 Q.new_middle_fed = 10;
-Q.new_middle_nsdap = 5;
+Q.new_middle_ufcp = 5;
 Q.new_middle_other = 15;
 
 Q.rural_snd = 10;
@@ -266,7 +266,7 @@ Q.rural_z = 5;
 Q.rural_re= 5;
 Q.rural_dvp = 15;
 Q.rural_fed = 45;
-Q.rural_nsdap = 5;
+Q.rural_ufcp = 5;
 Q.rural_other = 10;
 
 Q.unemployed_snd = 25;
@@ -275,7 +275,7 @@ Q.unemployed_z = 1;
 Q.unemployed_re = 0;
 Q.unemployed_dvp = 0;
 Q.unemployed_fed = 5;
-Q.unemployed_nsdap = 15;
+Q.unemployed_ufcp = 15;
 Q.unemployed_other = 9;
 
 Q.catholics_snd = 15;
@@ -284,7 +284,7 @@ Q.catholics_z = 50;
 Q.catholics_re = 0;
 Q.catholics_dvp = 5;
 Q.catholics_fed = 5;
-Q.catholics_nsdap = 0;
+Q.catholics_ufcp = 0;
 Q.catholics_other = 12;
 
 
@@ -300,7 +300,7 @@ Q.z_r = 17;
 Q.re_r = 6;
 Q.dvp_r = 10;
 Q.fed_r = 20;
-Q.nsdap_r = 3;
+Q.ufcp_r = 3;
 Q.other_r = 9;
 
 // diff from prev
@@ -310,7 +310,7 @@ Q.old_z_r = 17;
 Q.old_re_r = 6;
 Q.old_dvp_r = 10;
 Q.old_fed_r = 20;
-Q.old_nsdap_r = 3;
+Q.old_ufcp_r = 3;
 Q.old_other_r = 9;
 
 // sapd isn't formed yet, but it may be formed
@@ -339,7 +339,7 @@ Q.re_in_government = 0;
 Q.dvp_in_government = 1;
 Q.fed_in_government = 1;
 Q.lep_in_government = 0;
-Q.nsdap_in_government = 0;
+Q.ufcp_in_government = 0;
 
 Q.in_right_coalition = 0;
 // Weimar coalition = S&D + Z + Renew
