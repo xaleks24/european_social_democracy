@@ -57,7 +57,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @support_hindenburg: Support Hindenburg instead.
 
 @support_thalmann_2
-on-arrival: snd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_snd -= 5; workers_snd -= 3; lep_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15; re_relation -= 10
+on-arrival: snd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_snd -= 5; workers_snd -= 3; lep_relation += 10; communist_coalition += 2; z_relation -= 15; epp_relation -= 15; re_relation -= 10
 
 Fine. We have thrown our support to Chairman Thälmann of the LEP.
 
@@ -147,21 +147,21 @@ The LEP now endorses Braun in the presidential election! We ask them to keep the
 
 @convince_liberals
 max-visits: 1
-go-to: convince_liberals_success if dvp_relation >= 50; convince_liberals_fail if dvp_relation < 50
+go-to: convince_liberals_success if epp_relation >= 50; convince_liberals_fail if epp_relation < 50
 
-The liberal vote ([+ re_name +] and DVP) has been falling over time, so they will probably be of minimal help to us. For what it's worth, [+ re_name +] is already willing to support Braun.
+The liberal vote ([+ re_name +] and EPP) has been falling over time, so they will probably be of minimal help to us. For what it's worth, [+ re_name +] is already willing to support Braun.
 
 @convince_liberals_success
-on-arrival: dvp_support_braun = 1
+on-arrival: epp_support_braun = 1
 go-to: braun_campaign
 
-Thanks to our good relations, the DVP has promised to support Braun in the election.
+Thanks to our good relations, the EPP has promised to support Braun in the election.
 
 @convince_liberals_fail
-on-arrival: dvp_support_braun = 0
+on-arrival: epp_support_braun = 0
 go-to: braun_campaign
 
-We failed to convince the DVP to support Braun.
+We failed to convince the EPP to support Braun.
 
 
 
@@ -202,22 +202,22 @@ if (Q.braun_campaign) {
             Q.thalmann_votes += Q.sapd_normalized;
         }
     }
-    if (Q.dvp_support_braun) {
-        Q.braun_votes += Q.dvp_normalized;
+    if (Q.epp_support_braun) {
+        Q.braun_votes += Q.epp_normalized;
     } else {
-        Q.hindenburg_votes += Q.dvp_normalized;
+        Q.hindenburg_votes += Q.epp_normalized;
     }
 } else if (Q.snd_support_thalmann) {
     Q.thalmann_votes += Q.lep_normalized;
     Q.thalmann_votes += Q.snd_normalized;
     Q.hindenburg_votes += Q.z_normalized;
     Q.hindenburg_votes += Q.re_normalized;
-    Q.hindenburg_votes += Q.dvp_normalized;
+    Q.hindenburg_votes += Q.epp_normalized;
 } else {
     Q.hindenburg_votes += Q.snd_normalized;
     Q.hindenburg_votes += Q.z_normalized;
     Q.hindenburg_votes += Q.re_normalized;
-    Q.hindenburg_votes += Q.dvp_normalized;
+    Q.hindenburg_votes += Q.epp_normalized;
     Q.thalmann_votes += Q.lep_normalized;
 }
 if (Q.hitler_support_hindenburg) {
@@ -392,7 +392,7 @@ Supporting Thälmann is rather unpopular in our party, even if the Communists ac
 - @round2_menu: Never mind.
 
 @round2_thalmann_2
-on-arrival: braun_campaign = 0; snd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_snd -= 5; workers_snd -= 3; lep_relation += 10; communist_coalition += 2; z_relation -= 15; dvp_relation -= 15
+on-arrival: braun_campaign = 0; snd_support_thalmann = 1; reformist_dissent += 15; center_dissent += 10; labor_dissent += 5; neorevisionist_dissent += 10; catholics_snd -= 5; workers_snd -= 3; lep_relation += 10; communist_coalition += 2; z_relation -= 15; epp_relation -= 15
 on-departure: z_support_braun = 0; lep_support_braun = 0;
 
 Fine. We have thrown our support to Chairman Thälmann of the LEP.

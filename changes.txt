@@ -22,7 +22,7 @@ Minor changes:
 - Some more tax options.
 - Abortion rights and homosexual rights can be passed with a "progressive coalition" of the S&D, LEP, and Renew.
 - Can only use the Shuffle Cabinet and Women's Rights cards if the chancellor is S&D.
-- Low relations with the DVP results in less leverage in a grand coalition.
+- Low relations with the EPP results in less leverage in a grand coalition.
 - Papen being appointed as chancellor reduces judicial reform.
 - Changed frequencies of some cards.
 
@@ -385,7 +385,7 @@ v0.18.1 - Cabinets, protecting rallies, mod loading, difficulties
 
 Changes:
 
-- Changing some of the default names and party assignments for the Weimar Coalition, so that you don't get DVP ministers.
+- Changing some of the default names and party assignments for the Weimar Coalition, so that you don't get EPP ministers.
 - There is an option to use both the police and Reichsbanner to protect rallies, after using the Prussian police to train the Reichsbanner.
 - When loading a mod, the game title and author are set to the title and author of the mod.
 - Conciliators are no longer disabled in historical mode.
@@ -398,7 +398,7 @@ Major changes:
 - New government affairs card: Labor Rights
 - The unemployment insurance crisis can be handled preemptively using Labor Rights. In general, some of the flow around unemployment insurance has been changed.
 - New advisor: Rudolf Wissell (labor)
-- Party support changes are now more gradual, happening monthly instead of always at the start of the year. There are some tweaks to party support, with more support from middle-class and rural demographics flowing from Others and the DVP to the UFCP to better account for historical election results.
+- Party support changes are now more gradual, happening monthly instead of always at the start of the year. There are some tweaks to party support, with more support from middle-class and rural demographics flowing from Others and the EPP to the UFCP to better account for historical election results.
 
 Minor changes:
 - Some bug fixes and many minor tweaks.
@@ -454,7 +454,7 @@ New achievements:
 
 v1.1.3 - Bugfixing
 
-- In the second round of the 1934 presidential election, the Center, DStP, and DVP will consolidate if the S&D is not aligned with them.
+- In the second round of the 1934 presidential election, the Center, DStP, and EPP will consolidate if the S&D is not aligned with them.
 - Fixed bug with the achievement Brüder, zur Sonne, zur Freiheit not appearing.
 - Repeated occurrences of March on Berlin don't reduce paramilitary strength as much.
 - All Renew name occurrences should change to DStP when the time comes.

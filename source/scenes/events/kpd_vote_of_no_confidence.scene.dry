@@ -12,7 +12,7 @@ The LEP has called a vote of no confidence against us, due to our various polici
 @menu
 
 - @try_assuage: Try to assuage them somehow.
-- @support_center: Could we form a new government based on the Center Party and [+ re_name +] (and possibly DVP)?
+- @support_center: Could we form a new government based on the Center Party and [+ re_name +] (and possibly EPP)?
 - @let_it_happen: Let the vote happen.
 
 @try_assuage
@@ -49,8 +49,8 @@ By transferring resources to our coalition partners, we can reduce their dissent
 
 
 @support_center
-choose-if: (weimar_coalition >= 50 and z_relation >= 40) or (grand_coalition >= 50 and z_relation >= 45 and dvp_relation >= 30)
-unavailable-subtitle: [? if grand_coalition < 50 : This would not give us a majority. ?] [? if z_relation < 45 : After working with the Communists, the Center Party does not wish to form a coalition with us. ?] [? if dvp_relation < 30 : The DVP would rather see the government fall than rescue us from the Communists. ?]
+choose-if: (weimar_coalition >= 50 and z_relation >= 40) or (grand_coalition >= 50 and z_relation >= 45 and epp_relation >= 30)
+unavailable-subtitle: [? if grand_coalition < 50 : This would not give us a majority. ?] [? if z_relation < 45 : After working with the Communists, the Center Party does not wish to form a coalition with us. ?] [? if epp_relation < 30 : The EPP would rather see the government fall than rescue us from the Communists. ?]
 
 We could try to boot the LEP from our governing coalition, and form a new government[? if snd_r <= 50 : with the bourgeois parties ?].
 
@@ -75,7 +75,7 @@ The vote succeeds, and our coalition has collapsed. Chancellor [+ chancellor +] 
 New elections have been set for [+ next_election_month : month +] [+ next_election_year +].
 
 @let_it_happen_hindenburg
-on-arrival: next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; snd_in_government = 0; in_popular_front = 0; in_left_front = 0; chancellor = "Brüning"; chancellor_party = "Z "; foreign_minister_party = "DVP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = re_name; finance_minister_party = "DVP"; agriculture_minister_party = "Z"; coalition_dissent = 0; lep_coalition_dissent = 0; pro_republic -= 5; old_middle_snd -= 3; new_middle_snd -= 2; workers_snd -= 3 if pro_republic < 50; workers_snd -= 4 if pro_republic < 40; old_middle_ufcp += 4 if pro_republic < 50; new_middle_ufcp += 3 if pro_republic < 50
+on-arrival: next_election_time = time + 3 if next_election_time >= time + 3; next_election_month = month + 3 if next_election_time >= time + 3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12; snd_in_government = 0; in_popular_front = 0; in_left_front = 0; chancellor = "Brüning"; chancellor_party = "Z "; foreign_minister_party = "EPP"; interior_minister_party = "Z"; justice_minister_party = "I"; labor_minister_party = "Z"; reichswehr_minister_party = "I"; economic_minister_party = re_name; finance_minister_party = "EPP"; agriculture_minister_party = "Z"; coalition_dissent = 0; lep_coalition_dissent = 0; pro_republic -= 5; old_middle_snd -= 3; new_middle_snd -= 2; workers_snd -= 3 if pro_republic < 50; workers_snd -= 4 if pro_republic < 40; old_middle_ufcp += 4 if pro_republic < 50; new_middle_ufcp += 3 if pro_republic < 50
 
 The vote succeeds, and our government has resigned. Chancellor Brüning has been appointed as the head of an acting government, consisting solely of the bourgeois parties.
 

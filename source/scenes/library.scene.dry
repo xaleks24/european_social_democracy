@@ -80,7 +80,7 @@ LEP: [+ lep_r +]%
 # 1928: 5, 1930: 4 (as DstP)
 [+ re_name +]: [+ re_r +]%
 # 1928: 9, 1930: 5
-DVP: [+ dvp_r +]%
+EPP: [+ epp_r +]%
 # 1928: 14, 1930: 7
 FED: [+ fed_r +]%
 # 1928: 3, 1930: 18
@@ -175,7 +175,7 @@ LEP: [+ lep_votes +]%
 [+ re_name +]: [+ re_votes +]%
 
 # 1928: 9, 1930: 5
-DVP: [+ dvp_votes +]%
+EPP: [+ epp_votes +]%
 
 # 1928: 14, 1930: 7
 FED: [+ fed_votes +]%
@@ -188,17 +188,17 @@ Others: [+ other_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: S&D: [+ workers_snd_display +]%, Z: [+ workers_z_display +]%, LEP: [+ workers_lep_display +]%, [+ re_name +]: [+ workers_re_display +]%, DVP: [+ workers_dvp_display +]%; FED: [+ workers_fed_display +]%, UFCP: [+ workers_ufcp_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
+Workers: S&D: [+ workers_snd_display +]%, Z: [+ workers_z_display +]%, LEP: [+ workers_lep_display +]%, [+ re_name +]: [+ workers_re_display +]%, EPP: [+ workers_epp_display +]%; FED: [+ workers_fed_display +]%, UFCP: [+ workers_ufcp_display +]%, Others: [+ workers_other_display +]% [? if sapd_formed: SAPD: [+ workers_sapd_display +]% ?]
 
-New Middle Class: S&D: [+ new_middle_snd_display +]%, Z: [+ new_middle_z_display +]%, LEP: [+ new_middle_lep_display +]%, [+ re_name +]: [+ new_middle_re_display +]%, DVP: [+ new_middle_dvp_display +]%; FED: [+ new_middle_fed_display +]%, UFCP: [+ new_middle_ufcp_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
+New Middle Class: S&D: [+ new_middle_snd_display +]%, Z: [+ new_middle_z_display +]%, LEP: [+ new_middle_lep_display +]%, [+ re_name +]: [+ new_middle_re_display +]%, EPP: [+ new_middle_epp_display +]%; FED: [+ new_middle_fed_display +]%, UFCP: [+ new_middle_ufcp_display +]%, Others: [+ new_middle_other_display +]% [? if sapd_formed: SAPD: [+ new_middle_sapd_display +]% ?]
 
-Old Middle Class: S&D: [+ old_middle_snd_display +]%, Z: [+ old_middle_z_display +]%, LEP: [+ old_middle_lep_display +]%, [+ re_name +]: [+ old_middle_re_display +]%, DVP: [+ old_middle_dvp_display +]%; FED: [+ old_middle_fed_display +]%, UFCP: [+ old_middle_ufcp_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
+Old Middle Class: S&D: [+ old_middle_snd_display +]%, Z: [+ old_middle_z_display +]%, LEP: [+ old_middle_lep_display +]%, [+ re_name +]: [+ old_middle_re_display +]%, EPP: [+ old_middle_epp_display +]%; FED: [+ old_middle_fed_display +]%, UFCP: [+ old_middle_ufcp_display +]%, Others: [+ old_middle_other_display +]% [? if sapd_formed: SAPD: [+ old_middle_sapd_display +]% ?]
 
-Rural: S&D: [+ rural_snd_display +]%, Z: [+ rural_z_display +]%, LEP: [+ rural_lep_display +]%, [+ re_name +]: [+ rural_re_display +]%, DVP: [+ rural_dvp_display +]%; FED: [+ rural_fed_display +]%, UFCP: [+ rural_ufcp_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
+Rural: S&D: [+ rural_snd_display +]%, Z: [+ rural_z_display +]%, LEP: [+ rural_lep_display +]%, [+ re_name +]: [+ rural_re_display +]%, EPP: [+ rural_epp_display +]%; FED: [+ rural_fed_display +]%, UFCP: [+ rural_ufcp_display +]%, Others: [+ rural_other_display +]% [? if sapd_formed: SAPD: [+ rural_sapd_display +]% ?]
 
-Unemployed: S&D: [+ unemployed_snd_display +]%, Z: [+ unemployed_z_display +]%, LEP: [+ unemployed_lep_display +]%, [+ re_name +]: [+ unemployed_re_display +]%, DVP: [+ unemployed_dvp_display +]%; FED: [+ unemployed_fed_display +]%, UFCP: [+ unemployed_ufcp_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
+Unemployed: S&D: [+ unemployed_snd_display +]%, Z: [+ unemployed_z_display +]%, LEP: [+ unemployed_lep_display +]%, [+ re_name +]: [+ unemployed_re_display +]%, EPP: [+ unemployed_epp_display +]%; FED: [+ unemployed_fed_display +]%, UFCP: [+ unemployed_ufcp_display +]%, Others: [+ unemployed_other_display +]% [? if sapd_formed: SAPD: [+ unemployed_sapd_display +]% ?]
 
-Catholics: S&D: [+ catholics_snd_display +]%, Z: [+ catholics_z_display +]%, LEP: [+ catholics_lep_display +]%, [+ re_name +]: [+ catholics_re_display +]%, DVP: [+ catholics_dvp_display +]%; FED: [+ catholics_fed_display +]%, UFCP: [+ catholics_ufcp_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
+Catholics: S&D: [+ catholics_snd_display +]%, Z: [+ catholics_z_display +]%, LEP: [+ catholics_lep_display +]%, [+ re_name +]: [+ catholics_re_display +]%, EPP: [+ catholics_epp_display +]%; FED: [+ catholics_fed_display +]%, UFCP: [+ catholics_ufcp_display +]%, Others: [+ catholics_other_display +]% [? if sapd_formed: SAPD: [+ catholics_sapd_display +]% ?]
 
 @parties
 go-to: menu
@@ -213,9 +213,9 @@ Current relations: [+ z_relation : relationships +]
 
 Current relations: [+ re_relation : relationships +]
 
-**DVP** - *Deutsche Volkspartei* (German People's Party) - a conservative-liberal party, supported by the middle classes and bourgeoisie. We have occasionally been in coalitions.
+**EPP** - *The European People's Party* - A center-right traditional party for the mainstream right-wing voters. We have worked together in many commisions during the time of the European Union, but many of our supporters oppose further grand coalitions.
 
-Current relations: [+ dvp_relation : relationships +]
+Current relations: [+ epp_relation : relationships +]
 
 **FED** - *The Forum for European Democracy* - A right-wing conservative party formed by the merged of the ID group and ECR group in 2025 following their defeats in the 2024 election. Softly eurosceptic.
 
@@ -231,7 +231,7 @@ Current relations: [+ lep_relation : relationships +]
 
 Current relations: [+ ufcp_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the DVP and FED. 
+**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the EPP and FED. 
 
 @factions
 go-to: neorevisionists if neorevisionism > 0; menu if neorevisionism <= 0
@@ -330,10 +330,10 @@ data = data.concat([
         "seats": 3*5,
     },
     {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Q.dvp_r*5,
+        "id": "epp",
+        "legend": "EPP",
+        "name": "EPP",
+        "seats": Q.epp_r*5,
     },
     {
         "id": "other",
@@ -372,8 +372,8 @@ if (d3 && window) {
 
     var lines = d3.linegraph(false, false,
             Q.parties,
-            {'snd': '#E3000F', 'lep': '#8B0000', 're': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'fed': '#3f7bc1', 'ufcp': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'snd': 'S&D', 'lep': 'LEP', 're': Q.re_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'fed': 'FED', 'ufcp': 'UFCP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'snd': '#E3000F', 'lep': '#8B0000', 're': '#DCCA4A', 'z': '#000', 'epp': '#D5AC27', 'fed': '#3f7bc1', 'ufcp': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'snd': 'S&D', 'lep': 'LEP', 're': Q.re_name, 'z': 'Z + BVP', 'epp': 'EPP', 'fed': 'FED', 'ufcp': 'UFCP', 'other': 'Others', 'sapd': 'SAPD'});
     lines.width(width).height(400);
     //var svg = lines(Q.election_records);
     if (Q.election_records.length > 0) {
@@ -385,8 +385,8 @@ if (d3 && window) {
     if (!Q.historical_mode || Q.game_over) {
         var lines_2 = d3.linegraph(true, true,
             Q.parties,
-            {'snd': '#E3000F', 'lep': '#8B0000', 're': '#DCCA4A', 'z': '#000', 'dvp': '#D5AC27', 'fed': '#3f7bc1', 'ufcp': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
-            {'snd': 'S&D', 'lep': 'LEP', 're': Q.re_name, 'z': 'Z + BVP', 'dvp': 'DVP', 'fed': 'FED', 'ufcp': 'UFCP', 'other': 'Others', 'sapd': 'SAPD'});
+            {'snd': '#E3000F', 'lep': '#8B0000', 're': '#DCCA4A', 'z': '#000', 'epp': '#D5AC27', 'fed': '#3f7bc1', 'ufcp': '#954B00', 'other': '#a0a0a0', 'sapd': '#c40000'},
+            {'snd': 'S&D', 'lep': 'LEP', 're': Q.re_name, 'z': 'Z + BVP', 'epp': 'EPP', 'fed': 'FED', 'ufcp': 'UFCP', 'other': 'Others', 'sapd': 'SAPD'});
         lines_2.width(width).height(400);
         d3.select("#party_support_history").datum(Q.party_support_records).call(lines_2);
     }
@@ -420,7 +420,7 @@ if (d3 && window) {
 
 {!<tr><td><div class="box" style='background-color:#69A2BE'> </div></td><td>!} BVP: {!</td><td>!} 3% {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} DVP: {!</td><td>!} [+ dvp_r +]% {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#D5AC27'> </div></td><td>!} EPP: {!</td><td>!} [+ epp_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:#a0a0a0'> </div></td><td>!} Other parties: {!</td><td>!} [+ other_r +] % {!</td></tr>!}
 

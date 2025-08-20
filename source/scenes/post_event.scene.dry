@@ -302,7 +302,7 @@ if (Q.month_actions >= 1) {
         Q.new_middle_ufcp += 10/12;
         Q.old_middle_ufcp += 10/12;
         Q.new_middle_re -= 5/12;
-        Q.new_middle_dvp -= 5/12;
+        Q.new_middle_epp -= 5/12;
         Q.workers_lep += 5/12;
         Q.sa_strength += 50/12;
         Q.sh_strength += 100/12;
@@ -312,8 +312,8 @@ if (Q.month_actions >= 1) {
     } else if (Q.year == 1930) {
         Q.rural_ufcp += 10/12;
         Q.rural_fed -= 15/12;
-        Q.new_middle_dvp -= 5/12;
-        Q.old_middle_dvp -= 6/12;
+        Q.new_middle_epp -= 5/12;
+        Q.old_middle_epp -= 6/12;
         Q.new_middle_re -= 5/12;
         Q.old_middle_re -= 6/12;
         Q.new_middle_ufcp += 10/12;
@@ -337,9 +337,9 @@ if (Q.month_actions >= 1) {
         Q.sh_strength += 100/12;
     } else if (Q.year == 1931) {
         Q.catholics_z += 2/12;
-        Q.rural_dvp -= 8/12;
-        Q.old_middle_dvp -= 8/12;
-        Q.new_middle_dvp -= 8/12;
+        Q.rural_epp -= 8/12;
+        Q.old_middle_epp -= 8/12;
+        Q.new_middle_epp -= 8/12;
         Q.old_middle_re -= 8/12;
         Q.new_middle_re -= 8/12;
         Q.sa_strength += 50/12;
@@ -350,9 +350,9 @@ if (Q.month_actions >= 1) {
         Q.rural_ufcp += 9/12;
         // TODO: economic policies should reduce UFCP rurals
         if (!Q.works_program) {
-            Q.old_middle_dvp -= 6/12;
-            Q.new_middle_dvp -= 6/12;
-            Q.rural_dvp -= 6/12;
+            Q.old_middle_epp -= 6/12;
+            Q.new_middle_epp -= 6/12;
+            Q.rural_epp -= 6/12;
             Q.workers -= 4/12;
             Q.unemployed_ufcp += 7/12;
             Q.unemployed_lep += 2/12;
@@ -365,9 +365,9 @@ if (Q.month_actions >= 1) {
             Q.sa_strength += 100/12;
             Q.sh_strength += 50/12;
         } else if (Q.unemployed > 15) {
-            Q.old_middle_dvp -= 4/12;
-            Q.new_middle_dvp -= 4/12;
-            Q.rural_dvp -= 4/12;
+            Q.old_middle_epp -= 4/12;
+            Q.new_middle_epp -= 4/12;
+            Q.rural_epp -= 4/12;
             Q.unemployed_ufcp += 4/12;
             Q.old_middle_ufcp += 4/12;
             Q.new_middle_ufcp += 4/12;
@@ -395,9 +395,9 @@ if (Q.month_actions >= 1) {
             Q.sa_strength += 200/12;
             Q.new_middle_fed += 4/12;
             Q.new_middle_fed += 4/12;
-            Q.new_middle_dvp -= 4/12;
-            Q.old_middle_dvp -= 4/12;
-            Q.rural_dvp -= 4/12;
+            Q.new_middle_epp -= 4/12;
+            Q.old_middle_epp -= 4/12;
+            Q.rural_epp -= 4/12;
         } else if (Q.unemployed > 25) {
             Q.rural_ufcp += 5/12;
             Q.unemployed_ufcp += 5/12;
@@ -416,11 +416,11 @@ if (Q.month_actions >= 1) {
             if (Q.new_middle_re_normalized < 40) {
                 Q.new_middle_re += 6/12;
             }
-            if (Q.new_middle_dvp_normalized < 25) {
-                Q.new_middle_dvp += 3/12;
+            if (Q.new_middle_epp_normalized < 25) {
+                Q.new_middle_epp += 3/12;
             }
-            if (Q.old_middle_dvp_normalized < 40) {
-                Q.old_middle_dvp += 6/12;
+            if (Q.old_middle_epp_normalized < 40) {
+                Q.old_middle_epp += 6/12;
             }
             if (Q.rural_fed_normalized < 40) {
                 Q.rural_fed += 6/12;
