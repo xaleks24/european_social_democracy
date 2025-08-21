@@ -13,34 +13,34 @@ In our media and campaign materials, who should we consider as our main opponent
 
 [? if enemies != 0 : Previously, we had considered the [+ enemies +] as our prior enemies. Is a change of direction necessary? ?]
 
-- @anti_dem: The anti-democratic parties of the far right and left - the LEP, UFCP, and FED.
+- @radical: The radical parties of the far right and left - the LEP, UFCP, and FED.
 - @far_right: The far right - the UFCP and FED.
 - @ufcp: The UFCP alone.
 - @lep: The LEP.
-- @bourgeois: The bourgeois parties - the Center and EPP.
+- @center-right: The center-right parties - Renew and the EPP.
 - @easy_discard
 
-@anti_dem
-on-arrival: enemies = "anti-democratic parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; workers_lep -= 2; workers_ufcp -= 2; workers_fed -= 2; lep_relation -= 10
+@radical
+on-arrival: enemies = "radical parties"; center_strength += 5; reformist_strength += 5; left_dissent += 5; reformist_dissent -= 5; workers_lep -= 2; workers_ufcp -= 2; workers_fed -= 2; lep_relation -= 10; epp_relation += 2; re_relation += 2
 
-Attacking the far right and left is popular among all but the left wing of our party, who would prefer to be fighting the bourgeois parties. This might also hamper our ability to reconcile with the LEP in the future.
+Attacking the far right and left is popular among the right of our party. However, it is unpopular with the left, and might also hamper our ability to improve relations with the LEP in the future.
 
 @far_right
 on-arrival: enemies = "far right"; left_strength += 5; left_dissent -= 5; workers_ufcp -= 3; workers_fed -= 3;
 
-Attacking the far right is popular among the entire party, although the left considers the bourgeois parties to be just as dangerous, while the right is critical of our lack of response to the LEP. Our bourgeois coalition partners are also skeptical of our lack of commitment to anti-communism.
+Attacking the far right is popular among the entire party, allthough the left would also like us to attack the center-right, while the right dislikes our lack of attacks on the LEP
 
 @ufcp
 on-arrival: enemies = "UFCP"; neorevisionist_strength += 5; nazi_urgency += 1; workers_ufcp -= 4;
 
-[? if nazi_urgency == 0 or ufcp_r < 10 : The UFCP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and ufcp_r >= 10 : The Nazis are the most urgent problem for us to deal with. ?]
+[? if nazi_urgency == 0 or ufcp_r < 10 : The UFCP is a tiny party right now, with more bark than bite. Many in our party are questioning our choices. ?][? if nazi_urgency > 0 and ufcp_r >= 10 : The eurofascists are the most urgent problem for us to deal with. ?]
 
 @lep
-on-arrival: enemies = "LEP"; reformist_strength += 5; left_dissent += 8; reformist_dissent -= 5; lep_relation -= 15; epp_relation += 5; z_relation += 5; workers_lep -= 4;
+on-arrival: enemies = "LEP"; reformist_strength += 5; left_dissent += 12; reformist_dissent -= 5; lep_relation -= 15; epp_relation += 5; re_relation += 5; workers_lep -= 4;
 
-Attacking the LEP is supported by all but the most left-wing socialists, and wins us some measure of approval among the bourgeois parties. However, If we are to reconcile with the LEP, this may not be the best choice.
+Attacking the LEP is supported by the right of our party as well as with potential right-wing coalition partners, but the left is in open revolt.
 
-@bourgeois
-on-arrival: enemies = "bourgeois parties"; left_strength += 8; left_dissent -= 5; epp_relation -= 5; z_relation -= 5; lep_relation += 5; reformist_dissent += 8; workers_z -= 3; coalition_dissent += 1
+@center-right
+on-arrival: enemies = "center-right parties"; left_strength += 8; left_dissent -= 5; epp_relation -= 5; re_relation -= 5; lep_relation += 5; reformist_dissent += 8; workers_z -= 3; coalition_dissent += 1
 
-Our anti-bourgeois rhetoric is popular among the left, but may make it harder to build the coalitions that are necessary for government in the future.
+Our clear opposition against the right is popular among the left, but may make it harder to form coalitions, while the right of our party also criticises it. The LEP however views this as a positive development.
