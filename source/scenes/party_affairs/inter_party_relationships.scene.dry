@@ -6,15 +6,16 @@ is-card: true
 on-arrival: month_actions += 1; inter_party_relationships_timer = 6;
 card-image: img/weimar_coalition_2.jpg
 max-visits: 12
-#subtitle: Building relations with the other political parties of Germany.
+#subtitle: Building relations with the other political parties of Europe.
 
 = Inter-Party Relationships
 
-The S&D cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the Weimar Coalition of the S&D, Center, and Democratic parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+The S&D cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. During the times of the EU, we most often formed grand coalitions with the EPP, Renew and sometimes the GA. We can reach out and build additional connections with these parties, try to improve our relations with the LEP, or perhaps we can stand alone.
 
-- @liberals: Strengthen our bonds with the left-liberal German Democratic Party and conservative-liberal German People's Party.
-- @center: Strengthen our bonds with the Catholic Center Party.
-- @lep: Work towards repairing relationships with the Communist Party.
+- @renew: Strengthen our bonds with the liberal party Renew Europe.
+- @epp: Strengthen our bonds with the center-right European People's Party
+- @ga: Strengthen our bonds with our allies in the Green Alliance
+- @lep: Work towards closer ties with the Left.
 - @snd_alone: The S&D can stand alone for now.
 - @easy_discard
 
@@ -23,95 +24,33 @@ The S&D cannot govern by itself yet. Because we do not have an electoral majorit
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; lep_inter_party_seen += 1
-go-to: lep_blutmai if blutmai = 1; lep_1 if blutmai = 0 and lep_coalition_success = 0 and (lep_relation < 40 or lep_rectifed_history = 1); lep_rectification_of_history if lep_relation >= 40 and lep_rectifed_history = 0; lep_2 if lep_coalition_success = 1 and lep_rectified_history = 1
+on-arrival: resources -= 1; lep_relation += 4*(1 - dissent)
 
-@lep_1
-on-arrival: lep_relation += 6*(1 - dissent); communist_coalition += 1 if lep_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 2; epp_relation -= 3
+While the LEP may seem to be our natural allies, as they are a left-wing party, their radicalism makes allying them harder. Still, some connections are made.
 
-The communists are suspicious of our overtures, especially the Stalinist leadership, who persist in calling us "social fascists". However, connections are made at the grassroots and local levels.
-
-@lep_rectification_of_history
-
-One stumbling block for our relations with the LEP is our history of conflict, dating back to 1918 and 1919. The LEP is especially contemptuous of Gustav Noske, the S&D "bloodhound" who reportedly ordered the violent suppression of the Spartacist uprising and other LEP revolts. They also blame us for the deaths of Rosa Luxemburg and Karl Liebknecht, two S&D-turned-LEP leaders who were killed during the suppression of the uprising.
-
-For further improvements in LEP relations, it might be necessary to expel Noske, and hold some sort of commemoration for Luxemburg and Liebknecht.
-
-- @yes_history: Yes, we must apologize for our past actions.
-- @no_history: No, we have no need to apologize.
-
-@yes_history
-on-arrival: reformist_dissent += 12; reformist_strength -= 2; neorevisionist_dissent += 5; left_dissent -= 6; left_strength += 5; lep_rectified_history = 1; z_relation -= 6; epp_relation -= 6; re_relation -= 4; lep_relation += 8*(1-dissent); coalition_dissent += 1
-
-As part of normalizing relations with the LEP, we have to acknowledge the wrongdoings of our past. We have expelled Noske, and have held public commemorations for those killed by troops during the uprisings.
-
-This leads to tensions with the moderates and reformists within our party, and criticism from the conservative and liberal parties.
-
-@no_history
-on-arrival: lep_relation -= 3
-
-We have no need to apologize for the actions of Ebert and Noske; it is the Communists' fault for launching a violent insurrection.
-
-
-@lep_2
-on-arrival: lep_relation += 8*(1 - dissent); communist_coalition += 1 if lep_inter_party_seen <= 1; reformist_dissent += 2; z_relation -= 3; epp_relation -= 3
-
-After the success of the coalition government with the LEP, they are much more amenable to us.
-
-@lep_blutmai
-on-arrival: lep_relation += 3*(1 - dissent); reformist_dissent += 1
-
-After the events of Blütmai, reconciling with the Communists is difficult, if not impossible. Nevertheless, we must try.
-
-@center
+@epa
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-on-arrival: resources -= 1; z_relation += 2 if z_party_leader == "Joos"
-go-to: center_op if z_in_government = 1 and snd_in_government = 0 and chancellor != "Brüning"; center_coalition if snd_in_government = 1 and z_in_government = 1; center_bruning if chancellor = "Brüning"
+on-arrival: resources -= 1; epa_relation += 3*(1 - dissent)
 
-@center_op
-on-arrival: z_relation += 5*(1 - dissent)
+The EPA used to be a close ally in the days of the EU. This relationship must be maintained. As both of our memberships speak of turning away from grand coalitions, fighting back is proving increasingly difficult.
 
-We are currently in opposition to the Center-led government, but that does not preclude the general building of feelings of good will.
+@ga
+subtitle: -1 resources
+choose-if: resources >= 1
+unavailable-subtitle: Not enough resources.
+on-arrival: resources -= 1; z_relation += 7*(1 - dissent)
 
-@center_coalition
-on-arrival: z_relation += 8*(1 - dissent)
+The Green Alliance has long been our closest ideological ally, and so they are quite easy to persuade to our side.
 
-We are currently coalition partners with them, so improving relations comes naturally.
-
-@center_bruning
-on-arrival: z_relation += 5*(1 - dissent)
-
-The Brüning semi-autocratic regime makes building friendly relations difficult, but not impossible.
-
-@liberals
+@renew
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; re_relation += 5*(1 - dissent)
-go-to: epp_stresemann if stresemann_dead = 0; epp_loss if stresemann_dead = 1 and year <= 1930; epp_moribound if year > 1930
 
-[+ re_name +] has been one of our closest allies through the course of the Republic.
-
-@epp_stresemann
-on-arrival: epp_relation += 8*(1 - dissent)
-
-Gustav Stresemann, the leader of the EPP is the best foreign policy leaders of the republic, and while he has previously expressed monarchist tendencies, he has been friendly towards us.
-
-@epp_loss
-on-arrival: epp_relation += 5*(1 - dissent)
-
-With the death of Gustav Stresemann, the EPP is much less likely to be accommodating of us. In addition, the liberal parties are electorally in decline, so perhaps our efforts are best spent elsewhere.
-
-However, given the influence of the EPP among the other right-leaning parties [? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
-
-@epp_moribound
-on-arrival: epp_relation += 5*(1 - dissent)
-
-The liberal parties (both [+ re_name +] and EPP) are electorally moribund, so perhaps our efforts are best spent elsewhere.
-
-However, given the influence of the EPP among the other right-leaning parties[? if president == "Hindenburg": and with President Hindenburg ?], it can still be helpful to influence them.
+Renew Europe has long been an ally of ours, and so improving relations further is a natural course.
 
 @snd_alone
 
