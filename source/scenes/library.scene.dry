@@ -231,7 +231,7 @@ Current relations: [+ lep_relation : relationships +]
 
 Current relations: [+ ufcp_relation : relationships +]
 
-**Other parties** - there is a multitude of small, mostly conservative parties, such as the Economic Party of the German Middle Class, the Farmer's Party, the Agricultural League, and others. Their political position usually lies between the EPP and FED. 
+**Other parties** - There is a multitude of small parties, but their size virtually guarantees that they won't be able to enter the parlaiment. 
 
 @factions
 go-to: neorevisionists if neorevisionism > 0; menu if neorevisionism <= 0
