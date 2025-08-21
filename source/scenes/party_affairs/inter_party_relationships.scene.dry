@@ -28,7 +28,7 @@ on-arrival: resources -= 1; lep_relation += 4*(1 - dissent)
 
 While the LEP may seem to be our natural allies, as they are a left-wing party, their radicalism makes allying them harder. Still, some connections are made.
 
-@epa
+@epp
 subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
